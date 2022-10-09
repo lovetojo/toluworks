@@ -1,0 +1,87 @@
+.container{
+   font-family: sans-serif;
+   display: flex;
+   font-family: sans-serif;
+   background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)), url('../../../assets/images/sch3.jpeg') ;
+   background-repeat: no-repeat;
+   background-attachment: fixed;  
+   background-size:  cover;
+   height: 100%;
+   width: 100%;
+   min-width: 1366px;
+}
+header {
+   display: flex;
+   flex-direction: row;
+   justify-content: left;
+}
+header .logo {
+   display: flex;
+   flex-direction: row;
+}
+img{
+  
+   width: 175px;
+   height: 175px;
+}
+.integrated .title p {
+   color: #fff;
+   font-size: 24px;
+   margin-block-start: 0em;
+    margin-block-end: 0em;
+
+}
+.integrated p{
+  color:white;
+   font-size: 50px; 
+   margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+h4 {
+  padding-right: 580px;
+  padding-top: 19px;
+  position: absolute;
+  right: 5;
+}
+.input {
+   width: 400px;
+   padding: 1px;
+   border: 1px solid #ccc;
+   border-radius: 4px;
+   box-sizing: border-box;
+   margin-top: 6px;
+   margin-bottom: 10px;
+   height: 35px;
+   font-size: px;
+ }
+
+ .inputBox {
+   width: 400px;
+ }
+ 
+ button{
+    width: 100%;
+ }
+   
+ .section {
+   background-color: #f1f1f1;
+   width: auto;
+   height: auto;
+   opacity: 0.8;
+   border-radius: 6px;
+   background: #dedede;
+    position: absolute;
+    top: 20px;
+    right: 19px;
+    font-size: 15px;
+ } 
+ 
+ .container h1{
+    color: rgb(233, 14, 14);
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+ }
+ .invalid-feedback{
+   flex-wrap: wrap;
+ }

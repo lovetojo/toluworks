@@ -1,0 +1,159 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<input type="checkbox" id="nav-toggle"/>
+<div class="sidebar">
+   <div class="sidebar-brand">
+      <div class="user">
+         <img src="../../../assets/images/badge3.png" width="70px" height="68px" alt="">
+         <div>
+            <h2><span>TOL UNIVERSITY</span></h2>
+         </div>
+      </div>
+   </div>
+   <div class="sidebar-menu">
+      <ul>
+         <li><a routerLink="/dashboard"  >
+            <span><mat-icon> insert_emoticon</mat-icon></span>
+            <span >Dashboard</span>
+         </a></li>
+         <li><a routerLink="/profile" >
+            <span><mat-icon>account_circle</mat-icon></span>
+            <span >Profile</span>
+         </a></li>
+         <li><a routerLink="/coursereg">
+            <span><mat-icon>library_books</mat-icon></span>
+            <span class="nav-items">Course Registration</span>
+         </a></li>
+         <li><a routerLink="/veiwreg">
+            <span><mat-icon>event_note</mat-icon></span>
+            <span class="nav-items">View Registration</span>
+         </a></li>
+         <li><a href="" class="active">
+            <span><mat-icon>print</mat-icon></span>
+            <span class="nav-items">Print Registration</span>
+         </a></li>
+         <li><a routerLink="/biodata">
+            <span><mat-icon>assignment</mat-icon></span>
+            <span class="nav-items">Bio-Data</span>
+         </a></li>
+         <li><a routerLink="/setting">
+            <span><mat-icon>settings</mat-icon></span>
+            <span class="nav-items">Settings</span>
+         </a></li>
+         <div class="logout">
+            <li>
+               <button routerLink="/login" (click)= "onLogout($event)" class="nav-items">Log Out</button>
+            </li>
+            </div>
+      </ul>
+   </div>
+</div>
+<div class="main-content">
+   <header>
+      <h2>
+         <label for="nav-toggle">
+            <span><mat-icon>view_headline</mat-icon></span>
+         </label>
+         Print Registration
+      </h2>
+
+      <div class="search">
+         <span><mat-icon>search</mat-icon></span>
+         <input type="search" placeholder="Search here"/>
+      </div>
+      <div class="user">
+         <img src="../../../assets/images/profile1.jpg" width="50px" height="60px" alt="">
+         <div>
+            <h4>Yo Nigga</h4>
+            <small>Student user</small>
+         </div>
+      </div>
+   </header>
+   <main>
+      <table >
+         <tr>
+            <th>Semester:1st Semester</th>
+            <th>Programme:B.sc</th>
+             <th>Matric no:</th>
+           </tr>
+      </table>
+      <hr>
+      <table id="courses">
+         <tr>
+           <th>Code</th>
+           <th>Course</th>
+            <th>Status</th>
+            <th>Unit</th>
+          </tr><br>
+         <tr>
+            <td>GSC 101</td>
+            <td>INTRODUCTION TO FRENCH </td>
+            <td>R</td>
+            <td>1</td>
+
+          </tr><br>
+          <tr>
+            <td>GSC 107</td>
+            <td>REPRODUCTION HEALTH</td>
+            <td>R</td>
+            <td>2</td>
+
+          </tr><br>
+          <tr>
+            <td>GSC 108</td>
+            <td>SCIENCE AND MANKIND </td>
+            <td>R</td>
+            <td>3</td>
+
+          </tr><br>
+          <tr>
+            <td>POS 101</td>
+            <td>INTRODUCTION TO POL SCI</td>
+            <td>R</td>
+            <td>3</td>
+
+          </tr><br>
+          <tr>
+            <td>SOC 101</td>
+            <td>INTRODUCTION TO SOCIOLOGY </td>
+            <td>C</td>
+            <td>3</td>
+
+          </tr><br>
+          <tr>
+            <td>SOC 350</td>
+            <td>SOCIOLOGY OF MEDICINE </td>
+            <td>E</td>
+            <td>3</td>
+
+          </tr><br>
+          <tr>
+            <td>SOC 358</td>
+            <td>HUMAN RESOURCE MANAGEMENT </td>
+            <td>E</td>
+            <td>3</td>
+
+          </tr><br>
+          <tr>
+            <td>ECO 105</td>
+            <td>LOGIC AND PHILOSOPHY </td>
+            <td>E</td>
+            <td>3</td>
+          </tr><br>
+       </table>
+       <div class="sign">
+         <div class="hop">
+            <div>Head of Program</div>
+            <div>Provost</div>
+         </div>
+        <div class="hop">
+         
+         <div>Head of Department</div>
+         <div>Level Advisor</div>
+        </div>
+      </div>
+      <button>Print</button>
+   </main>
+</div>
+
+
+

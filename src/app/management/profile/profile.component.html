@@ -1,0 +1,122 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<input type="checkbox" id="nav-toggle"/>
+<div class="sidebar">
+   <div class="sidebar-brand">
+      <div class="user">
+         <img src="../../../assets/images/badge3.png" width="70px" height="68px" alt="">
+         <div>
+            <h2><span>TOL UNIVERSITY</span></h2>
+         </div>
+      </div>
+   </div>
+   <div class="sidebar-menu">
+      <ul>
+         <li><a routerLink="/dashboard"  >
+            <span><mat-icon> insert_emoticon</mat-icon></span>
+            <span >Dashboard</span>
+         </a></li>
+         <li><a href="" class="active">
+            <span><mat-icon>account_circle</mat-icon></span>
+            <span >Profile</span>
+         </a></li>
+         <li><a routerLink="/coursereg">
+            <span><mat-icon>library_books</mat-icon></span>
+            <span class="nav-items">Course Registration</span>
+         </a></li>
+         <li><a routerLink="/veiwreg">
+            <span><mat-icon>event_note</mat-icon></span>
+            <span class="nav-items">View Registration</span>
+         </a></li>
+         <li><a routerLink="/biodata">
+            <span><mat-icon>assignment</mat-icon></span>
+            <span class="nav-items">Bio-Data</span>
+         </a></li>
+         <li><a routerLink="/setting">
+            <span><mat-icon>settings</mat-icon></span>
+            <span class="nav-items">Settings</span>
+         </a></li>
+         <div class="logout">
+            <li>
+               <button routerLink="/login" (click)= "onLogout($event)" class="nav-items">Log Out</button>
+            </li>
+            </div>
+      </ul>
+   </div>
+</div>
+<div class="main-content">
+   <header>
+      <h2>
+         <label for="nav-toggle">
+            <span><mat-icon>view_headline</mat-icon></span>
+         </label>
+         Profile
+      </h2>
+
+      <div class="search">
+         <span><mat-icon>search</mat-icon></span>
+         <input type="search" placeholder="Search here"/>
+      </div>
+      <div class="user">
+         <span><mat-icon>account_circle</mat-icon></span>
+         <div>
+            <h4>{{data?.fname}} {{data?.midName}} {{data?.surName}}</h4>
+            <small>Student user</small>
+         </div>
+      </div>
+   </header>
+   <main>
+      <h5>Profile</h5>
+      <hr>
+      <div class="container">
+         <form class="needs-validation p-3" novalidate>
+            <div class="user-details">
+               <div class="name">
+                  <div>
+                     <label for="fname">Firstname:</label>
+                     <input type="text" id="fname" name="fname" [value]="data?.fname" readonly>
+                         
+                  </div>
+               </div>
+               <div class="name">
+                  <div>
+                     <label for="mname">Middlename:</label>
+                     <input type="text" id="mname" name="mname" [value]="data?.midName" readonly>
+                  </div>
+               </div>
+               <div class="name">
+                  <div>
+                     <label for="fname">Lastname:</label>
+                     <input type="text" id="lname" name="surName"[value]="data?.surName" readonly>     
+                  </div>
+               </div>
+               <div class="statue">
+                  <div class="row ">
+                     <label for="dob">Date of Birth:</label>
+                     <input type="text" id="dob" name="dob" [value]="data?.dateOfBirth" readonly>
+                  </div>
+                  <div class="row">
+                     <label for="age">Age:</label>
+                     <input style="width: 90px;" type="text" id="age" name="age" [value]="data?.age" readonly>
+                  </div>
+                  <div >
+                     <label for="sex">Sex:</label>
+                     <input type="text" id="depart" name="depart"  [value]="data?.sex" readonly>
+                  </div>
+               </div> 
+               <div class="college">
+                  <div >
+                     <label for="faculty">Faculty:</label>
+                     <input type="text" id="depart" name="depart" [value]="data?.faculty" readonly>
+                  </div>
+                  <div>
+                     <label for="depart">Department:</label>
+                     <input type="text" id="depart" name="depart" [value]="data?.department" readonly>
+                  </div> 
+               </div>
+            </div>
+         </form>
+         <hr>
+      </div>
+   </main>
+</div>
+

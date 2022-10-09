@@ -1,0 +1,216 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<input type="checkbox" id="nav-toggle"/>
+<div class="sidebar">
+   <div class="sidebar-brand">
+      <div class="user">
+         <img src="../../../assets/images/badge3.png" width="70px" height="68px" alt="">
+         <div>
+            <h2><span>TOL UNIVERSITY</span></h2>
+         </div>
+      </div>
+   </div>
+   <div class="sidebar-menu">
+      <ul>
+         <li><a routerLink="/dashboard"  >
+            <span><mat-icon> insert_emoticon</mat-icon></span>
+            <span >Dashboard</span>
+         </a></li>
+         <li><a routerLink="/profile" >
+            <span><mat-icon>account_circle</mat-icon></span>
+            <span >Profile</span>
+         </a></li>
+         <li><a routerLink="/coursereg">
+            <span><mat-icon>library_books</mat-icon></span>
+            <span class="nav-items">Course Registration</span>
+         </a></li>
+         <li><a routerLink="/veiwreg">
+            <span><mat-icon>event_note</mat-icon></span>
+            <span class="nav-items">View Registration</span>
+         </a></li>
+         <!-- <li><a routerLink="/printreg">
+            <span><mat-icon>print</mat-icon></span>
+            <span class="nav-items">Print Registration</span>
+         </a></li> -->
+         <li><a href="" class="active">
+            <span><mat-icon>assignment</mat-icon></span>
+            <span class="nav-items">Bio-Data</span>
+         </a></li>
+         <li><a routerLink="/setting">
+            <span><mat-icon>settings</mat-icon></span>
+            <span class="nav-items">Settings</span>
+         </a></li>
+         <div class="logout">
+            <li>
+               <button routerLink="/login" (click)= "onLogout($event)" class="nav-items">Log Out</button>
+            </li>
+            </div>
+      </ul>
+   </div>
+</div>
+<div class="main-content">
+   <header>
+      <h2>
+         <label for="nav-toggle">
+            <span><mat-icon>view_headline</mat-icon></span>
+         </label>
+         Bio-Data
+      </h2>
+
+      <div class="search">
+         <span><mat-icon>search</mat-icon></span>
+         <input type="search" placeholder="Search here"/>
+      </div>
+      <!-- <div class="user">
+         <span><mat-icon>account_circle</mat-icon></span>
+         <div>
+            <h4>{{data?.fname}} {{data?.midName}} {{data?.surName}}</h4>
+            <small>Student user</small>
+         </div>
+      </div> -->
+   </header>
+   <main>
+      <h5>Bio-Data Form</h5>
+      <hr>
+      <div class="container">
+         <form class="needs-validation p-3" novalidate>
+            <div class="user-details">
+            <!-- <div class="upload"> -->
+               <!-- <img src="../../../assets/images/profile2.jpg" width="100" height="100" alt=""> -->
+               <!-- <div class="round"> -->
+                  <!-- <mat-icon>photo_camera</mat-icon> -->
+                  <!-- <input type="file" (change) ="onChange($event)"  required >  -->
+               <!-- </div> -->
+            <!-- </div> -->
+            <div class="name">
+               <div>
+                  <label for="fname">First name:</label>
+                  <input type="text"  id="fname" name="fname"  minlength="3" [(ngModel)]="fName" required>     
+               </div>
+               <div>
+                  <label for="mname">Middlename:</label>
+                  <input type="text" id="mname" name="mname"  minlength="3" [(ngModel)]="midName" required>
+               </div>
+            </div>
+            <div class="last">
+               <div>
+                  <label for="lname"> Lastname:</label>
+                  <input type="text" id="lname" name="lname"  minlength="3" [(ngModel)]="surName" required>
+               </div>
+               <div>
+                  <label for="jamb">JAMB Reg No:</label>
+                 <input type="text" id="jamb" name="jamb"  minlength="10" [(ngModel)]="jambNo" required>
+              </div>
+            </div> 
+            <div class="statue">
+               <div class="row ">
+                  <label for="dob">Date of Birth:</label>
+                  <input type="date" placeholder="dd-mm-yyyy" id="dob" name="dob" [(ngModel)]="dateOfBirth" required>
+               </div>
+               <div class="row">
+                  <label for="age">Age:</label>
+                  <input style="width: 90px;" type="text" id="age" name="age"  minlength="1" [(ngModel)]="age" required>
+               </div>
+               <div >
+                  <label for="sex">Sex:</label>
+                  <select name="sex" id="sex" [(ngModel)]="sex" style="width: 80px; height: 32px; border-radius: 7px">
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                  <option value="others">Others</option>
+                  </select>
+               </div>
+               <div >
+                  <label for="status">Status:</label>
+                  <select name="status" id="status" [(ngModel)]="mStatus" style="width: 75px; height: 32px; border-radius: 7px">
+                  <option value="married">Married</option>
+                  <option value="single">Single</option>
+                  <option value="others">Others</option>
+                  </select>
+               </div>
+            </div>  
+            <div class="college">
+               <div >
+                  <label for="faculty">Faculty:</label>
+                  <select name="faculty" id="faculty" [(ngModel)]="faculty" style="width: 170px; height: 25px; border-radius: 7px">
+                  <option value="science">Science</option>
+                  <option value="medicine">Medicine</option>
+                  <option value="mbbs">MBBS</option>
+                  <option value="sms">Social Management Science</option>
+                  <option value="law">LAW</option>
+                  <option value="engine">engineering</option>
+                  </select>
+               </div>
+               <div>
+                  <label for="depart">Department:</label>
+                  <input type="text" id="depart" name="depart"   minlength="2" [(ngModel)]="department" required>
+               </div>
+            </div>  
+            <div class="addres">
+               <label for="address">Address:</label>
+               <input type="text" id="address" name="address"  minlength="10" [(ngModel)]="address" required>
+            </div>
+            <div class="emailphoneno">
+               <div >
+                  <label for="email">Email:</label>
+                  <input type="email" id="email" name="email" pattern={{emailRegex}} [(ngModel)]="email"   required>
+               </div>
+               <div>
+                  <label for="phone">Phone No:</label>
+                  <input type="text" id="phone" name="phone"  minlength="10" [(ngModel)]="phoneNo" required>
+               </div>
+            </div>
+            <div class="city">
+               <div>
+                  <label for="nation">Nationality:</label>
+                  <input type="text" id="nation" name="nation"  minlength="3" [(ngModel)]="nationality" required>
+               </div>
+               <div>
+                  <label for="religion">Religion:</label>
+                  <input type="text" id="religion" name="religion"  minlength="5" [(ngModel)]="religion" required>
+               </div>
+            </div>
+            <div class="state">
+               <div>
+                  <label for="soo">State of Origin</label>
+                  <input type="text" id="soo" name="soo"  minlength="5" [(ngModel)]="stOfOrg" required>
+               </div>
+               <div >
+                  <label for="lga">LGA:</label>
+                  <input type="text" id="lga" name="lga"  minlength="4" [(ngModel)]="lga" required>
+               </div>
+            </div>
+            <div> <hr></div>
+
+         <div class="addres">
+            <label for="address">Parents's/Guardian's Name:</label>
+            <input type="text" id="address" name="address"  minlength="6" [(ngModel)]="parName" required>
+         </div>
+         <div class="addres" >
+            <label for="address">Occupation of Parents/Guardian:</label>
+            <input type="text" id="address" name="address"  minlength="5" [(ngModel)]="occName" required>
+         </div>
+         <div class="addres">
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address"   minlength="10" [(ngModel)]="parAdd" required>
+         </div>
+         <div class="emailphoneno">
+            <div >
+               <label for="email">Email:</label>
+               <input type="email" id="email" name="email"  pattern={{emailRegex}} [(ngModel)]="parEmail"  required>
+            </div>
+            <div>
+               <label for="phone" >Phone No:</label>
+               <input type="text" id="phone" name="phone"  minlength="10" [(ngModel)]="parNo" required>
+            </div>
+         </div>
+         <div class="col-md-12 p-3">
+            <button class="btn btn-danger" type="button" (click)="biodata()"  >Submit</button>
+         </div>
+         </div>
+         </form>
+         <hr>
+      </div>
+   </main>
+</div>
+
+
+

@@ -1,0 +1,133 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   <input type="checkbox" id="nav-toggle"/>
+   <div class="sidebar">
+      <div class="sidebar-brand">
+         <div class="user">
+            <img src="../../../assets/images/badge3.png" width="70px" height="68px" alt="">
+            <div>
+               <h2><span>TOL UNIVERSITY</span></h2>
+            </div>
+         </div>
+      </div>
+      <div class="sidebar-menu">
+         <ul>
+            <li><a href="" class="active">
+               <span><mat-icon> insert_emoticon</mat-icon></span>
+               <span >Dashboard</span>
+            </a></li>
+            <li><a routerLink="/profile" >
+               <span><mat-icon>account_circle</mat-icon></span>
+               <span >Profile</span>
+            </a></li>
+            <li><a routerLink="/coursereg">
+               <span><mat-icon>library_books</mat-icon></span>
+               <span class="nav-items">Course Registration</span>
+            </a></li>
+            <li><a routerLink="/veiwreg">
+               <span><mat-icon>event_note</mat-icon></span>
+               <span class="nav-items">View Registration</span>
+            </a></li>
+            <!-- <li><a routerLink="/printreg">
+               <span><mat-icon>print</mat-icon></span>
+               <span class="nav-items">Print Registration</span>
+            </a></li> -->
+            <li><a routerLink="/biodata">
+               <span><mat-icon>assignment</mat-icon></span>
+               <span class="nav-items">Bio-Data</span>
+            </a></li>
+            <li><a routerLink="/setting">
+               <span><mat-icon>settings</mat-icon></span>
+               <span class="nav-items">Settings</span>
+            </a></li>
+            <div class="logout">
+               <li>
+                  <button routerLink="/login" (click)= "onLogout($event)" class="nav-items">Log Out</button>
+               </li>
+               </div>
+         </ul>
+      </div>
+   </div>
+   <div class="main-content">
+      <header [class.header_change] ="header_variable">
+         <h2>
+            <label for="nav-toggle">
+               <span><mat-icon>view_headline</mat-icon></span>
+            </label>
+            Dashboard
+         </h2>
+   
+         <div class="search">
+            <span><mat-icon>search</mat-icon></span>
+            <input type="search" placeholder="Search here"/>
+         </div>
+         <div class="user">
+            <img src="../../../assets/images/profile1.jpg" width="50px" height="60px" alt="">
+            <div>
+               <h4>Yo Nigga</h4>
+               <small>Student user</small>
+            </div>
+         </div>
+      </header>
+      <main>
+         <section class="sec-main">
+            <div class="main-skills">
+               <div class="card">
+                  <span class="material-icons">school</span>
+                  <h3>Total No. of Registered Courses:</h3>
+                  <p>0</p>
+                  <!-- <button>View the course</button> -->
+               </div>
+               <div class="card">
+                  <span class="material-icons">school</span>
+                  <h3>Outstanding Course(s):</h3>
+                  <p>0</p>
+                  <!-- <button>View the course</button> -->
+               </div>
+               <div class="card">
+                  <span class="material-icons">school</span>
+                  <h3>Finished Courses:</h3>
+                  <p>0</p>
+                  <!-- <button>View the course</button> -->
+               </div>
+               <div class="card">
+                  <span class="material-icons">school</span>
+                  <h3>CSC 108</h3>
+                  <p>0</p>
+                  <!-- <button>View the course</button> -->
+               </div>
+            </div>
+            <section class="main-course">
+               <h1>My Courses</h1>
+               <div class="course-box">
+                  <ul>
+                     <li routerLink="/dashboard"> In progress</li>
+                     <li href="" class="active">Incoming Courses</li>
+                     <li routerLink="/coursehistory"> Course History</li>
+                  </ul>
+                  <div class="row">
+                     <h1>nothing Yet</h1>
+                     <div class="col-md-7 col-lg-7 col-sm-12">
+                        <div class="course">
+                           <div class="box">
+                              <div class="upload">
+                                 <h1>My Info:</h1>
+                                 <img src="../../../assets/images/profile2.jpg" width="100" height="100" alt=""><br>
+                                 <div class="big">
+                                    Surnname Firstname Middlename
+                                    <br>
+                                    <b> College:</b>
+                                    <br>
+                                    <b> Department:</b>
+                                    <br>
+                                    <b> Level:</b>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+         </section>
+      </main>
+   </div>

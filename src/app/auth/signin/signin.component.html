@@ -1,0 +1,82 @@
+<div class="container">
+   <header>
+     <div class="logo">
+       <div><img src="../../../assets/images/badge3.png" /></div>   
+     </div>
+     <div class="integrated">
+       <label class="title pt-5 text-white "> TOL UNIVERSITY </label>
+       <div class="text-white fs-1 pt-2 pb-2 fw-bold"> Integrated </div>
+       <div class="text-white fs-2 pt-2 pb-2 fw-bold"> e-Portal</div>
+     </div>  
+   </header>
+   <div class="section m-1 pt-2 p-3 "> 
+     <h1>SIGN UP</h1>
+     <form class="needs-validation" novalidate>
+      <div class="col-md-12">
+         <label for="matric" class="form-label">Matric.no/JAMB.Reg</label>
+         <input type="text" class="form-control input" name="matric" id="matric" minlength="10" [(ngModel)]="matricNum" required>
+       </div>
+       <div class="col-md-12">
+         <label for="email" class="form-label">Email Address</label>
+         <input type="email" class="form-control input" name="email" id="email" pattern={{emailRegex}} [(ngModel)]="email"   required>
+         <!-- <div class="valid-feedback">
+           Looks good!
+         </div>
+         <div class="invalid-feedback">
+            Please shey normal!
+         </div> -->
+       </div>
+       <div class="d-flex col-12 inputBox mb-2">
+         <div class="col-6">
+            <label for="college" class="form-label">College</label>
+            <!-- <input type="text" class="form-control" name="college" id="college" minlength="2"  required> -->
+              <select name="faculty" id="faculty" style="width: 170px; height: 36px; border-radius: 7px">
+              <option value="science">Science</option>
+              <option value="medicine">Medicine</option>
+              <option value="mbbs">MBBS</option>
+              <option value="sms">Social Management Science</option>
+              <option value="law">LAW</option>
+              <option value="engine">engineering</option>
+              </select>
+          </div>
+          <div class="col-6">
+            <label for="depart" class="form-label">Department</label>
+            <input type="text" class="form-control" name="depart" id="depart" minlength="2" [(ngModel)]="department" required>
+          </div>
+       </div>
+       <div class="col-md-12">
+        <label for="level" class="form-label">Level</label>
+        <input type="text" class="form-control input" name="level" id="level" minlength="2"  [(ngModel)]="level" required>
+      </div>
+      <div class="d-flex col-12 inputBox mb-2">
+         <div class="col-6">
+            <label for="pwd" class="form-label">Password</label>
+            <input type="password" class="form-control" name="pwd" [(ngModel)]="password" id="pwd" pattern={{pattern}}  required>
+            <div class="invalid-feedback">
+               Password should be min 8 characters with Capital, Small, special and number characters
+            </div>
+          </div>
+          <div class="col-6">
+            <label for="pwd2" class="form-label">Confirm Password</label>
+            <input type="password" class="form-control" id="pwd2" name="pwd2" [(ngModel)]="cpassword" pattern={{password}} (keyup)="confirmPass()" required>
+            <div class="invalid-feedback">
+            Password Mismatch!
+            </div>
+          </div>
+       </div>
+      <!-- <div class="col-md-12 p-1">
+         <label for="username" class="form-label">Username</label>
+         <input type="text" class="form-control" id="username" minlength="10"  required>
+         <div class="valid-feedback ">
+           Looks good!
+         </div>
+         <div class="invalid-feedback">
+            Please shey normal!
+         </div>
+       </div> -->
+      <div class="col-md-12 pt-3">
+        <button class="btn btn-danger" type="button" (click)="validate($event)">Sign Up</button>
+     </div>
+     </form>
+</div>
+</div>

@@ -1,0 +1,121 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<input type="checkbox" id="nav-toggle"/>
+<div class="sidebar">
+   <div class="sidebar-brand">
+      <div class="user">
+         <img src="../../../assets/images/badge3.png" width="70px" height="68px" alt="">
+         <div>
+            <h2><span>TOL UNIVERSITY</span></h2>
+         </div>
+      </div>
+   </div>
+   <div class="sidebar-menu">
+      <ul>
+         <li><a routerLink="/dashboard"  >
+            <span><mat-icon> insert_emoticon</mat-icon></span>
+            <span >Dashboard</span>
+         </a></li>
+         <li><a routerLink="/profile" >
+            <span><mat-icon>account_circle</mat-icon></span>
+            <span >Profile</span>
+         </a></li>
+         <li><a routerLink="/coursereg">
+            <span><mat-icon>library_books</mat-icon></span>
+            <span class="nav-items">Course Registration</span>
+         </a></li>
+         <li><a routerLink="/veiwreg">
+            <span><mat-icon>event_note</mat-icon></span>
+            <span class="nav-items">View Registration</span>
+         </a></li>
+         <!-- <li><a routerLink="/printreg">
+            <span><mat-icon>print</mat-icon></span>
+            <span class="nav-items">Print Registration</span>
+         </a></li> -->
+         <li><a routerLink="/biodata">
+            <span><mat-icon>assignment</mat-icon></span>
+            <span class="nav-items">Bio-Data</span>
+         </a></li>
+         <li><a href="" class="active">
+            <span><mat-icon>settings</mat-icon></span>
+            <span class="nav-items">Settings</span>
+         </a></li>
+         <div class="logout">
+            <li>
+               <button routerLink="/login" (click)= "onLogout($event)" class="nav-items">Log Out</button>
+            </li>
+            </div>
+      </ul>
+   </div>
+</div>
+<div class="main-content">
+   <header>
+      <h2>
+         <label for="nav-toggle">
+            <span><mat-icon>view_headline</mat-icon></span>
+         </label>
+         Settings
+      </h2>
+
+      <div class="search">
+         <span><mat-icon>search</mat-icon></span>
+         <input type="search" placeholder="Search here"/>
+      </div>
+      <div class="user">
+         <span><mat-icon>account_circle</mat-icon></span>
+         <div>
+            <h4>{{data?.fname}} {{data?.midName}} {{data?.surName}}</h4>
+            <small>Student user</small>
+         </div>
+      </div>
+   </header>
+   <main>
+      <h5>Settings</h5>
+      <hr>
+         <div class="section">
+            <h2>Change Password</h2>
+            <form class="needs-validation" novalidate >
+               <div class="col-6">
+                  <label for="old-psw"><b>Old-Password:</b></label>
+                  <input type="password" class="form-control" [(ngModel)]="olppasssword" name="old-psw" id="old-psw" required><br>
+                  <!-- <div class="invalid-feedback">
+                     Password should be min 8 characters with Capital, Small, special and number characters
+                  </div> -->
+               </div>
+               <div class="col-6">
+                  <label for="pwd" class="form-label">Password</label>
+                  <input type="password" class="form-control" name="pwd" [(ngModel)]="password" id="pwd" pattern={{pattern}}  required>
+                  <div class="invalid-feedback">
+                     Password should be min 8 characters with Capital, Small, special and number characters
+                  </div>
+                </div>
+                <div class="col-6">
+                  <label for="pwd2" class="form-label">Confirm Password</label>
+                  <input type="password" class="form-control" id="pwd2" name="pwd2" [(ngModel)]="cpassword" pattern={{password}} (keyup)="confirmPass()" required>
+                  <div class="invalid-feedback">
+                  Password Mismatch!
+                  </div>
+                </div>
+              <div>
+               <button class="btn btn-danger" type="button" (click)="validate($event)">Change Password</button>
+              </div>
+            </form>
+     </div>
+     <!-- <div class="password">
+         <h2>Update Profile</h2>
+         <div class="upload">
+            <img src="../../../assets/images/profile2.jpg" width="100" height="100" alt="">
+            <div class="round">
+               <mat-icon>photo_camera</mat-icon>
+               <input type="file">
+            </div>
+         </div>
+      </div> -->
+      <div class="password">
+         <h2>Notification</h2>
+         <h3>You have no Notification yet</h3>
+      </div>
+   </main>
+</div>
+
+
+
